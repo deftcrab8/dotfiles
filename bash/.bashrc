@@ -12,6 +12,9 @@ then
 fi
 export PATH
 
+source /opt/Xilinx/Vivado/2018.1/settings64.sh
+
+# ENV_VARs
 export SIGASI_AI_MODEL="gpt-4o"
 export SIGASI_AI_API_KEY="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"
 
