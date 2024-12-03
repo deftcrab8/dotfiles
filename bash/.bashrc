@@ -25,15 +25,31 @@ export SIGASI_AI_API_KEY="sk-proj-CxS8gm9As6KniWInnsAx2CR2I83HXwgF1oIT5F1LKph0ap
 # ALIAS and SHORTHANDS
 ######################
 
+# SVN update 
 alias upim="svn update --set-depth immediates"
 alias upinf="svn update --set-depth infinity"
 alias coim="svn checkout "$1" --depth immediates"
 alias coinf="svn checkout "$1" --depth infinity"
 
-alias source_vivado="/opt/Xilinx/Vivado/2018.1/settings64.sh"
+# SVN SpaceCam checkout
+alias camcoall="svn co https://openprojgov.spacemicro.com/svn/cameras/ "$1" --depth immediates"
+alias camcofw="svn co https://openprojgov.spacemicro.com/svn/cameras/FW/trunk "$1" --depth immediates"
+alias camcosw="svn co https://openprojgov.spacemicro.com/svn/cameras/SW/trunk "$1" --depth immediates"
+
+srcviv_18_2 () {
+    /opt/Xilinx/Vivado/2018.2/settings64.sh
+}
+
+srcviv_18_1 () {
+    /opt/Xilinx/Vivado/2018.1/settings64.sh
+}
+export PATH=/opt/Xilinx/Vivado/2018.2/bin:$PATH
+
 
 alias ks='ls'
-
+alias celar='clear'
+alias f='xdg-open "$(fzf)"'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 bind '";s": "ls"'
 
 ####### END ##########
