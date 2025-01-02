@@ -64,3 +64,4 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 unset rc
+export PATH="$HOME/.local/bin:$PATH"
