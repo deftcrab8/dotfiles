@@ -44,6 +44,7 @@ coinf() {
 alias ks='ls'
 alias celar='clear'
 alias f='xdg-open "$(fzf)"'
+alias la='ls -la'
 bind '";s": "ls"'
 
 # Starship
